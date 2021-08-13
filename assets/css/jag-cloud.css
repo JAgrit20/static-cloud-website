@@ -292,7 +292,7 @@ header {
 }
 .navbar .navbar-toggler {
 	border-color: #fff;
-	background-color: #fff;	
+	background-color: #fff;
 	height: 36px;
 	outline: none;
 	border-radius: 0px;
@@ -1149,4 +1149,65 @@ footer .sub-footer a {
 		padding: 6px 10px;
 		letter-spacing: 0px;
 	}
+}
+
+.polling_message {
+  color: white;
+  float: left;
+  font-size:82px;
+  margin-right: 2%;
+}
+
+.view_port {
+  background-color: black;
+  height: 250px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cylon_eye {
+  background-color: red;
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, .9) 25%,
+      rgba(0, 0, 0, .1) 50%,
+      rgba(0, 0, 0, .9) 75%);
+  color: white;
+  height: 100%;
+  width: 20%;
+
+  -webkit-animation: 4s linear 0s infinite alternate move_eye;
+          animation: 4s linear 0s infinite alternate move_eye;
+}
+
+@-webkit-keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+        @keyframes move_eye { from { margin-left: -20%; } to { margin-left: 100%; }  }
+
+.element {
+  height: 250px;
+  width: 250px;
+  margin: 0 auto;
+  background-color: red;
+  animation-name: stretch;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    background-color: red;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: yellow;
+  }
 }
